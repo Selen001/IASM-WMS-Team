@@ -1,0 +1,366 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #102b4e;
+}
+
+/* Header */
+.main-header {
+    min-height: 68px;
+    padding: 7px 3%;
+    background: #092f59;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    min-width: 230px;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.brand h5 {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.brand span {
+    font-size: 10px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navigation a {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #bcdcff;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-login,
+.nav-register {
+    padding: 9px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.nav-login {
+    background: white;
+    color: #092f59;
+}
+
+.nav-register {
+    border: 1px solid white;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+}
+
+/* Hero */
+.hero-section {
+    min-height: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url("assets/hero.png");
+    background-size: cover;
+    background-position: center;
+    padding: 40px 4% 105px;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(5, 35, 68, 0.90) 0%,
+        rgba(5, 35, 68, 0.65) 34%,
+        rgba(5, 35, 68, 0.05) 72%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 440px;
+    max-width: 100%;
+}
+
+.hero-content h1 {
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.15;
+    font-weight: 750;
+    margin-bottom: 13px;
+}
+
+.hero-content h3 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-login,
+.hero-register {
+    min-width: 100px;
+    padding: 9px 18px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.hero-login {
+    background: white;
+    color: #092f59;
+}
+
+.hero-register {
+    border: 1px solid white;
+    color: white;
+}
+
+/* Feature Bar */
+.feature-bar {
+    position: absolute;
+    z-index: 2;
+    left: 3%;
+    right: 3%;
+    bottom: 20px;
+    min-height: 65px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+}
+
+.feature-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    min-height: 42px;
+    color: #102b4e;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border-right: 1px solid #d6dfeb;
+}
+
+.feature-item:last-child {
+    border-right: none;
+}
+
+.feature-item i {
+    font-size: 25px;
+    color: #092f59;
+}
+
+.feature-item:hover {
+    color: #1764a5;
+    background: #f2f7fc;
+    border-radius: 8px;
+}
+
+/* Information Sections */
+.info-section,
+.guidelines-section {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.info-section h2,
+.guidelines-section h2 {
+    color: #092f59;
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.info-section p,
+.guidelines-section p {
+    max-width: 850px;
+    margin: auto;
+    color: #52647a;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.guidelines-section {
+    background: #f3f6fa;
+}
+
+/* Footer */
+.home-footer {
+    background: #092f59;
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.home-footer h5 {
+    font-weight: bold;
+}
+
+.home-footer p {
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.home-footer small {
+    font-size: 11px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main-header {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0;
+        order: 3;
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .navigation a {
+        width: 100%;
+        padding: 11px 5px;
+    }
+
+    .header-buttons {
+        order: 2;
+    }
+
+    .feature-item {
+        gap: 6px;
+        font-size: 10px;
+    }
+
+    .feature-item i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-header {
+        gap: 10px;
+    }
+
+    .brand {
+        min-width: auto;
+    }
+
+    .header-buttons {
+        width: 100%;
+        justify-content: flex-end;
+        order: 4;
+    }
+
+    .hero-section {
+        min-height: 550px;
+        align-items: flex-start;
+        padding: 45px 20px 175px;
+        background-position: 60% center;
+    }
+
+    .hero-overlay {
+        background: rgba(5, 35, 68, 0.68);
+    }
+
+    .hero-content h1 {
+        font-size: 27px;
+    }
+
+    .feature-bar {
+        grid-template-columns: repeat(2, 1fr);
+        bottom: 12px;
+        gap: 5px;
+    }
+
+    .feature-item {
+        justify-content: flex-start;
+        padding: 8px;
+        border-right: none;
+        border-bottom: 1px solid #d6dfeb;
+        font-size: 11px;
+    }
+
+    .feature-item:last-child {
+        grid-column: span 2;
+        justify-content: center;
+        border-bottom: none;
+    }
+}
